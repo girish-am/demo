@@ -17,3 +17,7 @@ jobs:
                   ref: main
             - name: print terraform repo files 
               run: ls -al
+            - name: terraform init 
+              run: terraform init
+            - name: terraform plan
+              run : terraform plan
