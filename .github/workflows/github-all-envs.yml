@@ -4,9 +4,9 @@ on: [push]
 jobs:
     print-all-env:
         runs-on: ubuntu-latest
-        steps:
-            env:
+        env:
                 GITHUB_TOKEN = ${{ secrets.GIT_TOKEN }}
+        steps:
             - name : checkout terraform 
               uses: actions/checkout@v4
               with:
