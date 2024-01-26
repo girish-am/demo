@@ -2,7 +2,7 @@ name :  Git hub actions
 on :  [push]
 jobs : 
     build :
-        runs-on : ubuntu latest
+        runs-on : ubuntu-latest
         steps :
             - name : checkout 
               run : ls
