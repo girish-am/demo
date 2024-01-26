@@ -5,9 +5,8 @@ jobs:
     print-all-env:
         runs-on: ubuntu-latest
         steps:
-            - name : setup Git auth
-              run: 
-                  export GITHUB_TOKEN=${{ secrets.GIT_TOKEN }} 
+            env:
+                GITHUB_TOKEN = ${{ secrets.GIT_TOKEN }}
             - name : checkout terraform 
               uses: actions/checkout@v4
               with:
