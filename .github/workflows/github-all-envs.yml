@@ -6,4 +6,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name : print all envs 
-              run: echo ${{github.action}}
+              run: echo ${{GITHUB_ACTION}}
