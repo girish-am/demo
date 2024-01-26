@@ -10,3 +10,10 @@ jobs:
                   echo "GITHUB.ACTION = ${{ GITHUB.ACTION }}"
                   echo  " RUNNER.OS = ${{RUNNER.OS}}"
                   echo "GITHUB.RUN.NUMBER = ${{GITHUB.RUN_NUMBER}}"
+            - name : checkout terraform 
+              uses: actions/checkout@v4
+              with:
+                  repository : girish-am/terraform
+                  ref: main
+            - name: print terraform repo files 
+              run: ls -al
