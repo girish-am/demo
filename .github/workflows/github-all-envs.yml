@@ -7,7 +7,7 @@ jobs:
         steps:
             - name : setup Git auth
               run: 
-                  export token=${{ secrets.token }} 
+                  export GITHUB_TOKEN=${{ secrets.GIT_TOKEN }} 
             - name : checkout terraform 
               uses: actions/checkout@v4
               with:
