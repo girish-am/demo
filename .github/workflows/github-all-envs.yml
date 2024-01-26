@@ -7,5 +7,5 @@ jobs:
         steps:
             - name : print all envs 
               run: 
-                  echo "GITHUB.ACTION = ${{ GITHUB_ACTION }}""
-                  echo  " RUNNER_OS = ${{RUNNER_OS}}"
+                  echo "GITHUB.ACTION = ${{ GITHUB.ACTION }}""
+                  echo  " RUNNER.OS = ${{RUNNER.OS}}"
