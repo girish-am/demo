@@ -24,7 +24,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name : print all envs 
-              run: echo  "${{ GITHUB_ACTOR }}"
+              run: echo  ${{ github.actor }}
           
     
 
