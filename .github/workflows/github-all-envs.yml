@@ -4,7 +4,8 @@ on: [push]
 jobs:
     Terraform-Deploy:
         runs-on: ubuntu-latest
-       
+        env:
+            GITHUB_TOKEN=${{ secrets.GIT_TOKEN }}
         steps:
             - name: print secrets
               run: echo ${{ secrets.GIT_TOKEN }}
