@@ -5,7 +5,7 @@ jobs:
     Terraform-Deploy:
         runs-on: ubuntu-latest
         env:
-            GITHUB_TOKEN="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"
+            GITHUB_TOKEN=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
         steps:
             - name : checkout terraform 
               uses: actions/checkout@v4
