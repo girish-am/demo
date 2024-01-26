@@ -1,1 +1,5 @@
 name : Gitgub Actions Demo
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    -  run  : echo "Hello girish"
