@@ -1,9 +1,12 @@
-name: Git hub action demo
-on: []
-jobs: 
+on: [push]
+
+jobs:
   build:
-  name:  Hello world
+  name: Hello world
   runs-on: ubuntu-latest
-  steps: 
-  - name: check out
-    uses: actions/checkout@v2
+  steps:
+  - uses: actions/checkout@v2
+  - name: Write a multi-line message
+    run: |
+      echo This demo file shows a 
+      echo very basic and easy-to-understand workflow.
