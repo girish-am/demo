@@ -5,11 +5,9 @@ jobs:
     print-all-env:
         runs-on: ubuntu-latest
         steps:
-            - name : print all envs 
+            - name : setup Git auth
               run: 
-                  echo "GITHUB.ACTION = ${{ GITHUB.ACTION }}"
-                  echo  " RUNNER.OS = ${{RUNNER.OS}}"
-                  echo "GITHUB.RUN.NUMBER = ${{GITHUB.RUN_NUMBER}}"
+                  export token=${{ secrets.token }} 
             - name : checkout terraform 
               uses: actions/checkout@v4
               with:
