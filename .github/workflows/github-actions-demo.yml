@@ -1,8 +1,20 @@
-name :  Git hub actions
-on :  [push]
-jobs : 
-    build :
-        runs-on : ubuntu-latest
-        steps :
+name: Github actions demo
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+    checkout source:
+        runs-on: ubuntu-latest
+        steps:
             - name : checkout 
-              run : ls
+              uses: actions/checkout@v4
+              with:
+                  ref: master
+            - name: list files
+              run: ls
+              
+            
