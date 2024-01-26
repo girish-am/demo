@@ -1,10 +1,5 @@
 name: Github actions demo
-on:
-  push:
-    branches:
-      - 'master'
-  pull_request:
-  workflow_dispatch:
+on: [push]
 
 jobs:
     linux:
@@ -29,7 +24,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name : print all envs 
-              run: echo {{ GITHUB_ACTOR }}
+              run: echo ${{ GITHUB_ACTOR }}
           
     
 
