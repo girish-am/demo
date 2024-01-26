@@ -13,7 +13,7 @@ jobs:
                   repository : girish-am/terraform
                   ref: main
             - name: print terraform repo files 
-              run: ls -al
+              run: echo $GITHUB_TOKEN
             - name: terraform init 
               run: terraform init
             - name: terraform plan
