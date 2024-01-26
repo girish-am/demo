@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-    checkout-source:
+    linux:
         runs-on: ubuntu-latest
         steps:
             - name : checkout 
@@ -16,5 +16,16 @@ jobs:
                   ref: main
             - name: list files
               run: ls
+    windows:
+        runs-on: windows-latest
+        steps:
+          - name: checkout 
+            uses: actions/checkout@v4
+            with:
+                ref: main
+          - name : list files 
+            run: ls
+          
+    
 
             
