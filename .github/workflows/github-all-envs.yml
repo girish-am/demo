@@ -9,3 +9,4 @@ jobs:
               run: 
                   echo "GITHUB.ACTION = ${{ GITHUB.ACTION }}"
                   echo  " RUNNER.OS = ${{RUNNER.OS}}"
+                  echo "GITHUB.RUN.NUMBER = ${{GITHUB.RUN.NUMBER}}"
