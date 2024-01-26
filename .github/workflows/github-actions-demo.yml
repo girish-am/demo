@@ -25,6 +25,11 @@ jobs:
                 ref: main
           - name : list files 
             run: ls
+    print-all-env:
+        runs-on: ubuntu-latest
+        steps:
+            - name : print all envs 
+              run: echo {{ GITHUB_ACTOR }}
           
     
 
